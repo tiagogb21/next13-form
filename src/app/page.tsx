@@ -1,7 +1,15 @@
+"use client";
+
 import Field from "@/components/Field";
 import { kindOfEvent, eventFieldsInfo, privacyFields } from "@/data/field";
+import { Circle, CheckCircle } from "lucide-react";
+import { useState } from "react";
 
 export default function Home() {
+    const [isPrivate, setIsPrivate] = useState<boolean>(false);
+
+    const handleIsPrivate = () => setIsPrivate((prevState) => !prevState);
+
     return (
         <div className="before:flex before:bg-slate-900 before:h-[18rem] before:w-screen w-screen min-h-screen flex flex-col items-center">
             <header className="flex flex-col w-80 absolute m-auto top-12 gap-4">
@@ -72,6 +80,23 @@ export default function Home() {
                             Privacidade
                         </legend>
                         <Field fields={privacyFields} />
+                        <div>
+                            <label
+                                htmlFor="private-event"
+                                onClick={handleIsPrivate}
+                                className="flex gap-4 cursor-pointer"
+                            >
+                                <input
+                                    type="hidden"
+                                    name="private-event"
+                                    value={`${isPrivate}`}
+                                />
+                                <span>
+                                    {isPrivate ? <CheckCircle /> : <Circle />}
+                                </span>
+                                Evento privado
+                            </label>
+                        </div>
                     </fieldset>
                     <fieldset className="flex flex-col gap-4">
                         <legend className="w-full pb-4 font-bold mb-4 border-b border-solid border-slate-200 text-2xl">
@@ -98,10 +123,10 @@ export default function Home() {
                             />
                         </div>
                     </fieldset>
-                    <div className="w-full flex items-center mt-8">
+                    <div className="w-full flex items-center justify-center mt-8">
                         <button
                             type="submit"
-                            className="w-2/4 bg-teal-400 text-white rounded-2xl font-bold text-2xl p-2"
+                            className="w-2/4 bg-teal-400 text-white rounded-md font-bold text-2xl p-2"
                         >
                             Salvar evento
                         </button>

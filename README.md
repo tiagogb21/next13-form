@@ -40,6 +40,11 @@ http://localhost:3000
 - Defina as configurações de privacidade para determinar quem pode visualizar ou participar do evento.
 - Selecione a data e hora de início e término do evento.
 
+## Imagens
+
+![foto1]('./public/assets/imgs/foto1.png')
+![foto2]('./public/assets/imgs/foto2.png')
+
 ## Contribuição
 
 Contribuições são bem-vindas! Se você encontrar algum problema, tiver uma sugestão ou desejar adicionar novos recursos, sinta-se à vontade para abrir uma "issue" ou enviar um "pull request".
