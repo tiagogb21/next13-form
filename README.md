@@ -42,8 +42,8 @@ http://localhost:3000
 
 ## Imagens
 
-![foto1]('./public/assets/imgs/foto1.png')
-![foto2]('./public/assets/imgs/foto2.png')
+![foto1](./public/assets/imgs/foto1.png)
+![foto2](./public/assets/imgs/foto2.png)
 
 ## Contribuição
 
